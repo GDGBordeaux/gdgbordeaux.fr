@@ -1,0 +1,9 @@
+.Card-Favorite {
+  height: 18px;
+  width: 18px;
+  fill: #757575;
+  margin-right: 5px;
+}
+.Card-Favorite--active {
+  fill: #f04649;
+}

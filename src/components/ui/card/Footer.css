@@ -1,0 +1,9 @@
+.Card-Footer {
+  border-top: 1px solid #ededed;
+  flex-basis: 40px;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}

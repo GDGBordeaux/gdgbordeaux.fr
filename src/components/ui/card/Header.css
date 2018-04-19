@@ -1,0 +1,6 @@
+.Card-Header {
+  border-bottom: 1px solid #ededed;
+  flex-basis: 160px;
+  background-size: cover;
+  background-position: center;
+}
