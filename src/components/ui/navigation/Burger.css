@@ -1,0 +1,19 @@
+.Navbar-Burger {
+  height: 60px;
+  width: 60px;
+  display: none;
+  padding: 18px;
+}
+.Navbar-Burger-Icon {
+  fill: #ffffff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
+}
+.scrolled .Navbar-Burger-Icon {
+  fill: #757575;
+}
+
+@media (max-width: 800px) {
+  .Navbar-Burger {
+    display: inline-block;
+  }
+}

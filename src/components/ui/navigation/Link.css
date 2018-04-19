@@ -1,0 +1,30 @@
+.Navbar-Link {
+  color: inherit;
+  display: inline-block;
+  border: solid transparent;
+  border-width: 0 0 3px 0;
+  line-height: 31px;
+  padding: 13px 0 0 0;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
+}
+.scrolled .Navbar-Link {
+  padding-bottom: 13px;
+}
+.Navbar-Link--active {
+  border-color: #ffc20a;
+}
+
+@media (max-width: 800px) {
+  .Navbar-Link {
+    display: block;
+    line-height: 34px;
+    border-width: 0 0 0 3px;
+    margin: 8px 0;
+    padding: 0 10px;
+  }
+  .scrolled .Navbar-Link {
+    padding: 0 10px;
+  }
+}

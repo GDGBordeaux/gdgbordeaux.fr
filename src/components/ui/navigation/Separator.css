@@ -1,0 +1,13 @@
+.Navbar-Links-Separator {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .Navbar-Links-Separator {
+    display: block;
+    border: 0;
+    height: 1px;
+    background: #f0f0f0;
+    margin: 16px 0;
+  }
+}

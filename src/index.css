@@ -1,5 +1,18 @@
-body {
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  width: 100%;
+}
+body {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding-top: 80px;
+  padding: 0;
 }
