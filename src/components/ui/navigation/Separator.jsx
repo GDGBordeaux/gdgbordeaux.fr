@@ -6,7 +6,7 @@ import "./Separator.css";
 type Props = {};
 
 const Separator = (props: Props): React.Node => {
-  return <hr className="Separator-Links-Separator" />;
+  return <hr className="Navbar-Links-Separator" />;
 };
 
 export default Separator;
