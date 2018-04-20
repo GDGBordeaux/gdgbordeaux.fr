@@ -1,0 +1,18 @@
+.Team-Wrapper {
+  padding: 16px;
+  display: inline-flex;
+  flex-direction: column;
+}
+.Team {
+  border: 3px solid;
+  border-color: #4f8df5 #dd4e42 #ffc20a #129e5a;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.Team-Name {
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  padding: 16px 0 0 0;
+}
