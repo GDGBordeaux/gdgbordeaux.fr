@@ -36,7 +36,9 @@ class Navbar extends React.PureComponent<Props, State> {
             <div className="Navbar-Links-Container">
               <img className="Navbar-Links-Logo" src="./asset/gdg.png" />
               <Separator />
-              <Link to="/">Accueil</Link>
+              <Link to="/" exact>
+                Accueil
+              </Link>
               <Link to="/team">L'équipe</Link>
               <Link to="/about">A propos</Link>
               <Link to="https://www.meetup.com/fr-FR/GDG-Bordeaux/">Évènements</Link>

@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import "./Link.css";
 
 type Props = {
+  exact: boolean,
   to: string,
   children: string,
   className: string
@@ -22,7 +23,12 @@ const Link = (props: Props): React.Node => {
   }
 
   return (
-    <NavLink className={classNames} to={props.to} activeClassName="Navbar-Link--active">
+    <NavLink
+      exact={props.exact}
+      className={classNames}
+      to={props.to}
+      activeClassName="Navbar-Link--active"
+    >
       {props.children}
     </NavLink>
   );
