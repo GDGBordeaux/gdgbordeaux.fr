@@ -4,10 +4,12 @@ import * as React from "react";
 import PageContent from "../../../components/ui/layout/PageContent";
 import Footer from "../../../components/ui/footer/Footer";
 import PageTitle from "../../../components/ui/layout/PageTitle";
+import Container from "../../../components/ui/picture/Container";
+import StyledTeam from "../../../components/ui/picture/Team";
 
-const About = (): React.Node => (
+const Team = (): React.Node => (
   <React.Fragment>
-    <PageTitle>A propos du GDG Bordeaux</PageTitle>
+    <PageTitle>Découvrez l'équipe du GDG Bordeaux</PageTitle>
     <PageContent>
       Ça sounds good, tu vois au passage qu'il n'y a rien de concret car on vit dans une réalité
       qu'on a créée et que j'appelle illusion et parfois c'est bon parfois c'est pas bon. Donc on
@@ -33,6 +35,13 @@ const About = (): React.Node => (
       que j'appelle illusion et je ne cherche pas ici à mettre un point ! C'est cette année que j'ai
       eu la révélation !
     </PageContent>
+    <Container>
+      <StyledTeam image="./asset/brunosabot.jpg">Bruno Sabot</StyledTeam>
+      <StyledTeam image="./asset/sebastiendescamps.jpg">Sébastien Descamp</StyledTeam>
+      <StyledTeam image="./asset/ludovicgouyou.jpg">Ludovic Gouyou</StyledTeam>
+      <StyledTeam image="./asset/marcabouchacra.jpg">Marc Abou Chacra</StyledTeam>
+      <StyledTeam image="./asset/etiennegrandiervazeille.jpg">Etienne Grandier-Vazeille</StyledTeam>
+    </Container>
     <Footer>
       <span />
       <span />
@@ -40,4 +49,4 @@ const About = (): React.Node => (
   </React.Fragment>
 );
 
-export default About;
+export default Team;
