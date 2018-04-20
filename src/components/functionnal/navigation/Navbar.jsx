@@ -28,13 +28,17 @@ class Navbar extends React.PureComponent<Props, State> {
 
     return (
       <StyledNavbar>
-        <img src="asset/gdg-transparent-white.png" className="Navbar-Logo-White" />
-        <img src="asset/gdg-transparent.png" className="Navbar-Logo" />
+        <img
+          src="asset/gdg-transparent-white.png"
+          className="Navbar-Logo-White"
+          alt="Logo GDG Bordeaux"
+        />
+        <img src="asset/gdg-transparent.png" className="Navbar-Logo" alt="" />
         <div className="Navbar-Links">
           <Burger onClick={this.handleActive} />
           <div className={wrapperClassName} onClick={this.handleActive}>
             <div className="Navbar-Links-Container">
-              <img className="Navbar-Links-Logo" src="./asset/gdg.png" />
+              <img className="Navbar-Links-Logo" src="./asset/gdg.png" alt="" />
               <Separator />
               <Link to="/" exact>
                 Accueil
