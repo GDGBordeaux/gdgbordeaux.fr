@@ -25,6 +25,10 @@ type Props = {
 const updateFavorite = id => () => {
   const favorites: Reference = firebase.database().ref(`/posts/${id}/favorites`);
   favorites.once("value").then(snapshot => {
+    if (firebase.auth().currentUser === null) {
+      return;
+    }
+
     const userId: string = firebase.auth().currentUser.uid;
     const favs: { [string]: string } = snapshot.val() || {};
 
@@ -43,6 +47,10 @@ const updateFavorite = id => () => {
 };
 
 const isActive = favorites => {
+  if (firebase.auth().currentUser === null) {
+    return false;
+  }
+
   return Object.values(favorites).indexOf(firebase.auth().currentUser.uid) > -1;
 };
 
