@@ -9,29 +9,31 @@ const About = (): React.Node => (
   <React.Fragment>
     <PageTitle>A propos du GDG Bordeaux</PageTitle>
     <PageContent>
-      Ça sounds good, tu vois au passage qu'il n'y a rien de concret car on vit dans une réalité
-      qu'on a créée et que j'appelle illusion et parfois c'est bon parfois c'est pas bon. Donc on
-      n'est jamais seul spirituellement !
+      Google Developer Group (GDG) Bordeaux est un regroupement de développeurs passionnés par les
+      technologies et plateformes de Google : Android, Chrome, Google Apps, GWT, AppEngine, etc.
+      partout dans le monde.
+    </PageContent>
+
+    <PageContent>
+      Le groupe a pour vocation de se réunir régulièrement autour des thèmes suivants:
+      <ul>
+        <li>Conférences sur les technologies Google et autres</li>
+        <li>
+          Des apéros autour de sujets centraux afin de se rencontrer et boire un verre ensemble
+        </li>
+        <li>Des concours tels que le Hackathon</li>
+        <li>La retransmission d'évènements majeurs Google I/O, Keynotes, etc.</li>
+      </ul>
     </PageContent>
     <PageContent>
-      Tu comprends, si vraiment tu veux te rappeler des souvenirs de ton perroquet, entre penser et
-      dire, il y a un monde de différence et parfois c'est bon parfois c'est pas bon. Et tu as envie
-      de le dire au monde entier, including yourself.
+      <b>Attention :</b> le GDG Bordeaux est un groupe indépendant. Nos activités et nos opinions
+      exprimées ici ne doivent en aucun cas être affilié à Google, l'entreprise.<br />
     </PageContent>
     <PageContent>
-      Si je t'emmerde, tu me le dis, même si on frime comme on appelle ça en France... en vérité, la
-      vérité, il n'y a pas de vérité et je ne cherche pas ici à mettre un point ! Donc on n'est
-      jamais seul spirituellement !
-    </PageContent>
-    <PageContent>
-      Je me souviens en fait, j'ai vraiment une grande mission car c'est un très, très gros travail
-      et c'est très, très beau d'avoir son propre moi-même ! Et j'ai toujours grandi parmi les
-      chiens.
-    </PageContent>
-    <PageContent>
-      Même si on se ment, ce n'est pas un simple sport car on vit dans une réalité qu'on a créée et
-      que j'appelle illusion et je ne cherche pas ici à mettre un point ! C'est cette année que j'ai
-      eu la révélation !
+      En revanche, vous pouvez retrouver la liste complète des GDG à l'adresse suivante :{" "}
+      <a href="http://developpers.google.com/groups" target="_blank" rel="noopener noreferrer">
+        http://developpers.google.com/groups
+      </a>
     </PageContent>
     <Footer>
       <span />
