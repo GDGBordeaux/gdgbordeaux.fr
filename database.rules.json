@@ -1,0 +1,13 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": false,
+    "posts": {
+      "$post": {
+        "favorites": {
+          ".write": true
+        }
+      }
+    }
+  }
+}

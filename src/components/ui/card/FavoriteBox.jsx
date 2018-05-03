@@ -8,7 +8,11 @@ type Props = {
 };
 
 const FavoriteBox = (props: Props): React.Node => {
-  return <div className="Card-Favorite-Box">{props.children}</div>;
+  return (
+    <div {...props} className="Card-Favorite-Box">
+      {props.children}
+    </div>
+  );
 };
 
 export default FavoriteBox;
