@@ -3,6 +3,6 @@
   justify-content: center;
   flex-wrap: wrap;
   padding: 16px 0;
-  width: 900px;
+  max-width: 900px;
   margin: auto;
 }
