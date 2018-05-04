@@ -4,6 +4,7 @@ import firebase from "../../../config/firebase";
 import type { Reference } from "firebase/database";
 // import type { Reference } from "../../../../flow-typed/firebase/database";
 
+import FakeCard from "../../../components/ui/card/FakeCard";
 import Card from "../../../components/functionnal/navigation/Card";
 import CardContainer from "../../../components/ui/card/CardContainer";
 import Hero from "../../../components/ui/layout/Hero";
@@ -27,7 +28,12 @@ class Home extends React.PureComponent<Props, State> {
   firebaseRef: Reference;
   firebaseCallback: () => void;
   state = {
-    data: {}
+    data: {
+      0: { fakeCard: true },
+      1: { fakeCard: true },
+      2: { fakeCard: true },
+      3: { fakeCard: true },
+    }
   };
 
   componentDidMount() {
@@ -47,7 +53,10 @@ class Home extends React.PureComponent<Props, State> {
     return <React.Fragment>
         <Hero>Google Developer Group Bordeaux</Hero>
         <CardContainer>
-          {data.map(key => <Card key={key} id={key} {...this.state.data[key]} />)}
+          {data.map(key => this.state.data[key].fakeCard === true
+            ? <FakeCard />
+            : <Card key={key} id={key} {...this.state.data[key]} />
+          )}
         </CardContainer>
         <Footer />
       </React.Fragment>;

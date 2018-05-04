@@ -2,3 +2,6 @@
   flex-grow: 2;
   padding: 16px;
 }
+.Card-Content h3 {
+  margin: 18px 0;
+}
