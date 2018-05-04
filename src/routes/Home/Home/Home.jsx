@@ -7,7 +7,7 @@ import type { Reference } from "firebase/database";
 import Card from "../../../components/functionnal/navigation/Card";
 import CardContainer from "../../../components/ui/card/CardContainer";
 import Hero from "../../../components/ui/layout/Hero";
-import Footer from "../../../components/ui/footer/Footer";
+import Footer from "../../../components/functionnal/navigation/Footer";
 
 type Post = {
   content: string[],
@@ -44,18 +44,13 @@ class Home extends React.PureComponent<Props, State> {
   render(): React.Node {
     const data: string[] = Object.keys(this.state.data);
 
-    return (
-      <React.Fragment>
+    return <React.Fragment>
         <Hero>Google Developer Group Bordeaux</Hero>
         <CardContainer>
           {data.map(key => <Card key={key} id={key} {...this.state.data[key]} />)}
         </CardContainer>
-        <Footer>
-          <span />
-          <span />
-        </Footer>
-      </React.Fragment>
-    );
+        <Footer />
+      </React.Fragment>;
   }
 }
 

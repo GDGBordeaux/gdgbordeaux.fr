@@ -2,7 +2,7 @@
 import * as React from "react";
 
 import PageContent from "../../../components/ui/layout/PageContent";
-import Footer from "../../../components/ui/footer/Footer";
+import Footer from "../../../components/functionnal/navigation/Footer";
 import PageTitle from "../../../components/ui/layout/PageTitle";
 
 const About = (): React.Node => (
@@ -35,10 +35,7 @@ const About = (): React.Node => (
         http://developpers.google.com/groups
       </a>
     </PageContent>
-    <Footer>
-      <span />
-      <span />
-    </Footer>
+    <Footer />
   </React.Fragment>
 );
 

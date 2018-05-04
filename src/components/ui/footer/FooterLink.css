@@ -1,0 +1,10 @@
+.FooterLink {
+  display: flex;
+  fill: #ffffff;
+  margin-bottom: 20px;
+}
+.FooterLink-Label {
+  color: #ffffff;
+  line-height: 24px;
+  margin-left: 10px;
+}
