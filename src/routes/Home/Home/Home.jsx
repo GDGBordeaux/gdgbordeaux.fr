@@ -54,7 +54,7 @@ class Home extends React.PureComponent<Props, State> {
         <Hero>Google Developer Group Bordeaux</Hero>
         <CardContainer>
           {data.map(key => this.state.data[key].fakeCard === true
-            ? <FakeCard />
+            ? <FakeCard key={key} />
             : <Card key={key} id={key} {...this.state.data[key]} />
           )}
         </CardContainer>

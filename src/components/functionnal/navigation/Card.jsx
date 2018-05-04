@@ -33,16 +33,16 @@ const updateFavorite = id => () => {
     const favs: { [string]: string } = snapshot.val() || {};
 
     if (isActive(favs)) {
-      delete favs[userId];
+      if (Object.values(favs).length === 1) {
+        favorites.remove();
+      } else {
+        favorites.child(userId).remove();
+      }
     } else {
       favs[userId] = userId;
-    }
-
-    if (Object.values(favs).length === 0) {
-      favorites.remove();
-    } else {
       favorites.update(favs);
     }
+
   });
 };
 
