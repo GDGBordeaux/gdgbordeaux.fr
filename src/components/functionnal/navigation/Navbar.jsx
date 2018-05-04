@@ -3,6 +3,7 @@ import StyledNavbar from "../../ui/navigation/Navbar";
 import Burger from "../../ui/navigation/Burger";
 import Link from "../../ui/navigation/Link";
 import Separator from "../../ui/navigation/Separator";
+import Share from "./Share";
 
 type Props = {};
 
@@ -46,6 +47,7 @@ class Navbar extends React.PureComponent<Props, State> {
               <Link to="/team">L'équipe</Link>
               <Link to="/about">A propos</Link>
               <Link to="https://www.meetup.com/fr-FR/GDG-Bordeaux/">Évènements</Link>
+              <Share />
             </div>
           </div>
         </div>

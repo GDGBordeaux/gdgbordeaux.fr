@@ -1,0 +1,20 @@
+.Share-Svg {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.Share-Legend {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .Share-Svg {
+    margin: 10px 15px 0 0;
+    vertical-align: top;
+  }
+  .Share-Legend {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    line-height: 24px;
+  }
+}
