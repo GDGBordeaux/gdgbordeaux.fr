@@ -7,8 +7,8 @@ type Props = {
   children: string
 };
 
-const Paragraph = (props: Props): React.Node => {
-  return <p className="Card-Content-Paragraph">{props.children}</p>;
+const Paragraph = ({ children }: Props): React.Node => {
+  return <p className="Card-Content-Paragraph" dangerouslySetInnerHTML={{ __html: children }} />;
 };
 
 export default Paragraph;
