@@ -42,7 +42,6 @@ const updateFavorite = id => () => {
       favs[userId] = userId;
       favorites.update(favs);
     }
-
   });
 };
 
@@ -60,9 +59,9 @@ const Card = (props: Props): React.Node => {
       <Header image={props.image} />
       <Content>
         <Title>{props.title}</Title>
-        {props.content.map((paragraph: string): React.Node => (
-          <Paragraph key={paragraph}>{paragraph}</Paragraph>
-        ))}
+        {props.content.map(
+          (paragraph: string): React.Node => <Paragraph key={paragraph}>{paragraph}</Paragraph>
+        )}
       </Content>
       <Footer>
         <StyledDate>{props.date}</StyledDate>

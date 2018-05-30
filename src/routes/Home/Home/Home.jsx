@@ -2,7 +2,6 @@
 import * as React from "react";
 import firebase from "../../../config/firebase";
 import type { Reference } from "firebase/database";
-// import type { Reference } from "../../../../flow-typed/firebase/database";
 
 import FakeCard from "../../../components/ui/card/FakeCard";
 import Card from "../../../components/functionnal/navigation/Card";
@@ -32,7 +31,7 @@ class Home extends React.PureComponent<Props, State> {
       0: { fakeCard: true },
       1: { fakeCard: true },
       2: { fakeCard: true },
-      3: { fakeCard: true },
+      3: { fakeCard: true }
     }
   };
 
@@ -50,16 +49,22 @@ class Home extends React.PureComponent<Props, State> {
   render(): React.Node {
     const data: string[] = Object.keys(this.state.data);
 
-    return <React.Fragment>
+    return (
+      <React.Fragment>
         <Hero>Google Developer Group Bordeaux</Hero>
         <CardContainer>
-          {data.map(key => this.state.data[key].fakeCard === true
-            ? <FakeCard key={key} />
-            : <Card key={key} id={key} {...this.state.data[key]} />
+          {data.map(
+            key =>
+              this.state.data[key].fakeCard === true ? (
+                <FakeCard key={key} />
+              ) : (
+                <Card key={key} id={key} {...this.state.data[key]} />
+              )
           )}
         </CardContainer>
         <Footer />
-      </React.Fragment>;
+      </React.Fragment>
+    );
   }
 }
 
