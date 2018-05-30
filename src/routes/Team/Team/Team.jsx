@@ -1,5 +1,7 @@
 // @flow
 import * as React from "react";
+import firebase from "../../../config/firebase";
+import type { Reference } from "firebase/database";
 
 import Footer from "../../../components/functionnal/navigation/Footer";
 import PageTitle from "../../../components/ui/layout/PageTitle";
@@ -22,24 +24,54 @@ function shuffle(array) {
   return array;
 }
 
-const team = [
-  { image: "./asset/brunosabot.jpg", name: "Bruno Sabot" },
-  { image: "./asset/sebastiendescamps.jpg", name: "Sébastien Descamps" },
-  { image: "./asset/ludovicgouyou.jpg", name: "Ludovic Gouyou" },
-  { image: "./asset/marcabouchacra.jpg", name: "Marc Abou Chacra" },
-  { image: "./asset/etiennegrandiervazeille.jpg", name: "Etienne Grandier-Vazeille" },
-];
+type Member = {
+  name: string,
+  image: string,
+  github?: string,
+  twitter?: string
+};
 
-const Team = (): React.Node => (
-  <React.Fragment>
-    <PageTitle>Découvrez l'équipe du GDG Bordeaux</PageTitle>
-    <Container>
-      {shuffle(team).map(
-        member => <StyledTeam key={member.name} image={member.image}>{member.name}</StyledTeam>
-      )}
-    </Container>
-    <Footer />
-  </React.Fragment>
-);
+type Props = {};
+
+type State = {
+  data: { [string]: Member }
+};
+
+class Team extends React.PureComponent<Props, State> {
+  firebaseRef: Reference;
+  firebaseCallback: () => void;
+  state = {
+    data: []
+  };
+
+  componentDidMount() {
+    this.firebaseRef = firebase.database().ref("/members");
+    this.firebaseCallback = this.firebaseRef.on("value", snap => {
+      this.setState({ data: snap.val() });
+    });
+  }
+
+  componentWillUnmount() {
+    this.firebaseRef.off("value", this.firebaseCallback);
+  }
+
+  render() {
+    const data: string[] = Object.keys(this.state.data);
+
+    return (
+      <React.Fragment>
+        <PageTitle>Découvrez l'équipe du GDG Bordeaux</PageTitle>
+        <Container>
+          {shuffle(data).map(member => (
+            <StyledTeam key={this.state.data[member].name} image={this.state.data[member].image}>
+              {this.state.data[member].name}
+            </StyledTeam>
+          ))}
+        </Container>
+        <Footer />
+      </React.Fragment>
+    );
+  }
+}
 
 export default Team;
