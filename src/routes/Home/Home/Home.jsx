@@ -53,14 +53,16 @@ class Home extends React.PureComponent<Props, State> {
       <React.Fragment>
         <Hero>Google Developer Group Bordeaux</Hero>
         <CardContainer>
-          {data.map(
-            key =>
-              this.state.data[key].fakeCard === true ? (
-                <FakeCard key={key} />
-              ) : (
-                <Card key={key} id={key} {...this.state.data[key]} />
-              )
-          )}
+          {data
+            .sort((a, b) => new Date(this.state.data[a].date) < new Date(this.state.data[b].date))
+            .map(
+              key =>
+                this.state.data[key].fakeCard === true ? (
+                  <FakeCard key={key} />
+                ) : (
+                  <Card key={key} id={key} {...this.state.data[key]} />
+                )
+            )}
         </CardContainer>
         <Footer />
       </React.Fragment>
