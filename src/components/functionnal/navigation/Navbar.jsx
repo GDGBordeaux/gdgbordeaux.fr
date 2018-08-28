@@ -46,6 +46,7 @@ class Navbar extends React.PureComponent<Props, State> {
               </Link>
               <Link to="/team">L'équipe</Link>
               <Link to="/about">A propos</Link>
+              <Link to="/codeofconduct">Code de conduite</Link>
               <Link to="https://www.meetup.com/fr-FR/GDG-Bordeaux/">Évènements</Link>
               <Share />
             </div>

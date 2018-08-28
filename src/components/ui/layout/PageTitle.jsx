@@ -8,6 +8,7 @@ type Props = {
 };
 
 const PageTitle = (props: Props): React.Node => {
+  document.title = `GDG Bordeaux - ${props.children}`;
   return <h1 className="PageTitle">{props.children}</h1>;
 };
 

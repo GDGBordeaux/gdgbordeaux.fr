@@ -8,6 +8,8 @@ type Props = {
 };
 
 const Hero = (props: Props): React.Node => {
+  document.title = props.children;
+
   return (
     <div className="Hero">
       <h1 className="Hero-Title">{props.children}</h1>

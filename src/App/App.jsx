@@ -3,6 +3,7 @@ import * as React from "react";
 import { Route, Switch } from "react-router-dom";
 
 import About from "../routes/About";
+import Conduct from "../routes/Conduct";
 import Home from "../routes/Home";
 import Team from "../routes/Team";
 
@@ -16,6 +17,7 @@ const App = (): React.Node => (
     <Switch>
       <Route path="/" component={Home} exact />
       <Route path="/team" component={Team} />
+      <Route path="/codeofconduct" component={Conduct} />
       <Route path="/about" component={About} />
     </Switch>
   </div>
