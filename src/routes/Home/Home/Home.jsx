@@ -16,11 +16,15 @@ type Post = {
   title: string,
   favorites?: { [string]: string }
 };
+type FakePost = {
+  fakeCard: boolean,
+  date?: string
+};
 
 type Props = {};
 
 type State = {
-  data: { [string]: Post }
+  data: { [string]: Post | FakePost }
 };
 
 class Home extends React.PureComponent<Props, State> {
@@ -28,10 +32,10 @@ class Home extends React.PureComponent<Props, State> {
   firebaseCallback: () => void;
   state = {
     data: {
-      0: { fakeCard: true },
-      1: { fakeCard: true },
-      2: { fakeCard: true },
-      3: { fakeCard: true }
+      "0": { fakeCard: true },
+      "1": { fakeCard: true },
+      "2": { fakeCard: true },
+      "3": { fakeCard: true }
     }
   };
 
@@ -54,7 +58,16 @@ class Home extends React.PureComponent<Props, State> {
         <Hero>Google Developer Group Bordeaux</Hero>
         <CardContainer>
           {data
-            .sort((a, b) => new Date(this.state.data[a].date) < new Date(this.state.data[b].date))
+            .sort((a, b) => {
+              if (!this.state.data[a].date) {
+                return -1;
+              }
+              if (!this.state.data[b].date) {
+                return 1;
+              }
+
+              return new Date(this.state.data[a].date) < new Date(this.state.data[b].date) ? 1 : -1;
+            })
             .map(
               key =>
                 this.state.data[key].fakeCard === true ? (

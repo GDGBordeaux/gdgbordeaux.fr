@@ -8,7 +8,7 @@ type Props = {
 };
 
 const dateLang: string = "fr-FR";
-const dateOption: Date$LocaleOptions = {
+const dateOption: Intl$DateTimeFormatOptions = {
   day: "numeric",
   month: "long",
   year: "numeric"

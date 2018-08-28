@@ -4,7 +4,7 @@ import * as React from "react";
 import "./PageTitle.css";
 
 type Props = {
-  children: React.Node
+  children: string
 };
 
 const PageTitle = (props: Props): React.Node => {

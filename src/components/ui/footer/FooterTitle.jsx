@@ -4,7 +4,7 @@ import * as React from "react";
 import "./FooterTitle.css";
 
 type Props = {
-  children: React.Node[]
+  children: React.Node
 };
 
 const FooterTitle = (props: Props): React.Node => {

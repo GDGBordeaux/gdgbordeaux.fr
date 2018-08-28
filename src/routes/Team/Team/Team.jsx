@@ -41,7 +41,7 @@ class Team extends React.PureComponent<Props, State> {
   firebaseRef: Reference;
   firebaseCallback: () => void;
   state = {
-    data: []
+    data: {}
   };
 
   componentDidMount() {
