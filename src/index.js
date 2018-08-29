@@ -1,4 +1,4 @@
-import "firebase";
+import "./config/firebase";
 import Main from "./main";
 // import registerServiceWorker from "./registerServiceWorker";
 

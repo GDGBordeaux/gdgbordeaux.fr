@@ -1,7 +1,9 @@
 // @flow
 import * as React from "react";
 import type { Reference } from "firebase/database";
-import firebase from "../../../config/firebase";
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/database";
 
 import Footer from "../../../components/functionnal/navigation/Footer";
 import PageTitle from "../../../components/ui/layout/PageTitle";
