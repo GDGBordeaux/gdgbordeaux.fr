@@ -20,6 +20,20 @@ const App = (): React.Node => (
       <Route path="/codeofconduct" component={Conduct} />
       <Route path="/about" component={About} />
     </Switch>
+    <button
+      className="pwa-update"
+      id="pwaUpdate"
+      type="button"
+      onKeyPress={event => {
+        if (event.key === "Enter") {
+          window.location.reload();
+        }
+      }}
+      onClick={() => window.location.reload()}
+      style={{ display: "none" }}
+    >
+      La page a été mise à jour. Cliquez la voir
+    </button>
   </div>
 );
 

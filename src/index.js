@@ -1,9 +1,9 @@
 import "./config/firebase";
 import Main from "./main";
-// import registerServiceWorker from "./registerServiceWorker";
+import registerServiceWorker from "./registerServiceWorker";
 
 Main();
-// registerServiceWorker();
+registerServiceWorker();
 
 const html = document.querySelector("html");
 const checkScroll = () => {
