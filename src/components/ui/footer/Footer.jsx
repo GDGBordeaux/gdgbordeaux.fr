@@ -7,8 +7,6 @@ type Props = {
   children: React.Node[]
 };
 
-const Footer = (props: Props): React.Node => {
-  return <div className="Footer">{props.children}</div>;
-};
+const Footer = ({ children }: Props): React.Node => <div className="Footer">{children}</div>;
 
 export default Footer;

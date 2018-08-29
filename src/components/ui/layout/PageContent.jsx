@@ -7,8 +7,8 @@ type Props = {
   children: React.Node
 };
 
-const PageContent = (props: Props): React.Node => {
-  return <div className="PageContent">{props.children}</div>;
-};
+const PageContent = ({ children }: Props): React.Node => (
+  <div className="PageContent">{children}</div>
+);
 
 export default PageContent;

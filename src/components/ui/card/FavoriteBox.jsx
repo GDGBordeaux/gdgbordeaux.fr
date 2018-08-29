@@ -7,12 +7,10 @@ type Props = {
   children: React.Node[]
 };
 
-const FavoriteBox = (props: Props): React.Node => {
-  return (
-    <div {...props} className="Card-Favorite-Box">
-      {props.children}
-    </div>
-  );
-};
+const FavoriteBox = ({ children, ...props }: Props): React.Node => (
+  <div {...props} className="Card-Favorite-Box">
+    {children}
+  </div>
+);
 
 export default FavoriteBox;

@@ -1,28 +1,14 @@
 // @flow
 import * as React from "react";
-import firebase from "../../../config/firebase";
 import type { Reference } from "firebase/database";
+import firebase from "../../../config/firebase";
 
 import Footer from "../../../components/functionnal/navigation/Footer";
 import PageTitle from "../../../components/ui/layout/PageTitle";
 import Container from "../../../components/ui/picture/Container";
 import StyledTeam from "../../../components/ui/picture/Team";
 
-function shuffle(array) {
-  let counter = array.length;
-
-  while (counter > 0) {
-    const index = Math.floor(Math.random() * counter);
-
-    counter--;
-
-    const temp = array[counter];
-    array[counter] = array[index];
-    array[index] = temp;
-  }
-
-  return array;
-}
+const shuffle = array => array.sort(() => 0.5 - Math.random());
 
 type Member = {
   name: string,
@@ -38,8 +24,6 @@ type State = {
 };
 
 class Team extends React.PureComponent<Props, State> {
-  firebaseRef: Reference;
-  firebaseCallback: () => void;
   state = {
     data: {}
   };
@@ -55,16 +39,21 @@ class Team extends React.PureComponent<Props, State> {
     this.firebaseRef.off("value", this.firebaseCallback);
   }
 
+  firebaseCallback: () => void;
+
+  firebaseRef: Reference;
+
   render() {
-    const data: string[] = Object.keys(this.state.data);
+    const { data } = this.state;
+    const dataKeys: string[] = Object.keys(data);
 
     return (
       <React.Fragment>
-        <PageTitle>Découvrez l'équipe du GDG Bordeaux</PageTitle>
+        <PageTitle>Découvrez l&apos;équipe du GDG Bordeaux</PageTitle>
         <Container>
-          {shuffle(data).map(member => (
-            <StyledTeam key={this.state.data[member].name} image={this.state.data[member].image}>
-              {this.state.data[member].name}
+          {shuffle(dataKeys).map(member => (
+            <StyledTeam key={data[member].name} image={data[member].image}>
+              {data[member].name}
             </StyledTeam>
           ))}
         </Container>

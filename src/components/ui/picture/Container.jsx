@@ -7,8 +7,6 @@ type Props = {
   children: React.Node
 };
 
-const Container = (props: Props): React.Node => {
-  return <div className="TeamList">{props.children}</div>;
-};
+const Container = ({ children }: Props): React.Node => <div className="TeamList">{children}</div>;
 
 export default Container;

@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
-import firebase from "../../../config/firebase";
 import type { Reference } from "firebase/database";
+import firebase from "../../../config/firebase";
 
 import FakeCard from "../../../components/ui/card/FakeCard";
 import Card from "../../../components/functionnal/navigation/Card";
@@ -28,8 +28,6 @@ type State = {
 };
 
 class Home extends React.PureComponent<Props, State> {
-  firebaseRef: Reference;
-  firebaseCallback: () => void;
   state = {
     data: {
       "0": { fakeCard: true },
@@ -50,30 +48,35 @@ class Home extends React.PureComponent<Props, State> {
     this.firebaseRef.off("value", this.firebaseCallback);
   }
 
+  firebaseCallback: () => void;
+
+  firebaseRef: Reference;
+
   render(): React.Node {
-    const data: string[] = Object.keys(this.state.data);
+    const { data } = this.state;
+    const dataKeys: string[] = Object.keys(data);
 
     return (
       <React.Fragment>
         <Hero>Google Developer Group Bordeaux</Hero>
         <CardContainer>
-          {data
+          {dataKeys
             .sort((a, b) => {
-              if (!this.state.data[a].date) {
+              if (!data[a].date) {
                 return -1;
               }
-              if (!this.state.data[b].date) {
+              if (!data[b].date) {
                 return 1;
               }
 
-              return new Date(this.state.data[a].date) < new Date(this.state.data[b].date) ? 1 : -1;
+              return new Date(data[a].date) < new Date(data[b].date) ? 1 : -1;
             })
             .map(
               key =>
-                this.state.data[key].fakeCard === true ? (
+                data[key].fakeCard === true ? (
                   <FakeCard key={key} />
                 ) : (
-                  <Card key={key} id={key} {...this.state.data[key]} />
+                  <Card key={key} id={key} {...data[key]} />
                 )
             )}
         </CardContainer>

@@ -7,8 +7,6 @@ type Props = {
   children: React.Node[]
 };
 
-const Card = (props: Props): React.Node => {
-  return <div className="Card">{props.children}</div>;
-};
+const Card = ({ children }: Props): React.Node => <div className="Card">{children}</div>;
 
 export default Card;

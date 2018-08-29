@@ -7,6 +7,6 @@ type Props = {
   children: string
 };
 
-const Title = (props: Props): React.Node => <h3>{props.children}</h3>;
+const Title = ({ children }: Props): React.Node => <h3>{children}</h3>;
 
 export default Title;

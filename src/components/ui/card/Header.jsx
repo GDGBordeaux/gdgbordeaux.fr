@@ -7,8 +7,8 @@ type Props = {
   image: string
 };
 
-const Header = (props: Props): React.Node => {
-  return <div className="Card-Header" style={{ backgroundImage: "url(" + props.image + ")" }} />;
-};
+const Header = ({ image }: Props): React.Node => (
+  <div className="Card-Header" style={{ backgroundImage: `url(${image})` }} />
+);
 
 export default Header;

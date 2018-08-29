@@ -8,13 +8,11 @@ type Props = {
   children: string
 };
 
-const Team = (props: Props): React.Node => {
-  return (
-    <div className="Team-Wrapper">
-      <img className="Team" src={props.image} alt={props.children} />
-      <span className="Team-Name">{props.children}</span>
-    </div>
-  );
-};
+const Team = ({ children, image }: Props): React.Node => (
+  <div className="Team-Wrapper">
+    <img className="Team" src={image} alt={children} />
+    <span className="Team-Name">{children}</span>
+  </div>
+);
 
 export default Team;

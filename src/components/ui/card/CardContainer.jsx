@@ -7,8 +7,8 @@ type Props = {
   children: React.Node[] | React.Node
 };
 
-const CardContainer = (props: Props): React.Node => {
-  return <div className="Card-Container">{props.children}</div>;
-};
+const CardContainer = ({ children }: Props): React.Node => (
+  <div className="Card-Container">{children}</div>
+);
 
 export default CardContainer;

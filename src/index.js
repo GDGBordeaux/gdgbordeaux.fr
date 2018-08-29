@@ -15,7 +15,7 @@ const checkScroll = () => {
 };
 const setRandomBackground = () => {
   const i = 1 + Math.floor(Math.random() * 4);
-  document.body.style.backgroundImage = "url(./asset/bg" + i + ".jpeg)";
+  document.body.style.backgroundImage = `url(./asset/bg${i}.jpeg)`;
 };
 
 window.addEventListener("scroll", checkScroll);

@@ -22,15 +22,16 @@ const About = (): React.Node => (
           Des apéros autour de sujets centraux afin de se rencontrer et boire un verre ensemble
         </li>
         <li>Des concours tels que le Hackathon</li>
-        <li>La retransmission d'évènements majeurs Google I/O, Keynotes, etc.</li>
+        <li>La retransmission d&apos;évènements majeurs Google I/O, Keynotes, etc.</li>
       </ul>
     </PageContent>
     <PageContent>
       <b>Attention :</b> le GDG Bordeaux est un groupe indépendant. Nos activités et nos opinions
-      exprimées ici ne doivent en aucun cas être affilié à Google, l'entreprise.<br />
+      exprimées ici ne doivent en aucun cas être affilié à Google, l&apos;entreprise.
+      <br />
     </PageContent>
     <PageContent>
-      En revanche, vous pouvez retrouver la liste complète des GDG à l'adresse suivante :{" "}
+      En revanche, vous pouvez retrouver la liste complète des GDG à l&apos;adresse suivante :{" "}
       <a href="http://developpers.google.com/groups" target="_blank" rel="noopener noreferrer">
         http://developpers.google.com/groups
       </a>

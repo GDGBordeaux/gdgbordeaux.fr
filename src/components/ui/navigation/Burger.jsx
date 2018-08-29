@@ -7,9 +7,19 @@ type Props = {
   onClick: () => void
 };
 
-const Burger = (props: Props): React.Node => {
+const Burger = ({ onClick }: Props): React.Node => {
+  const onEnter = () => {
+    onClick();
+  };
+
   return (
-    <span className="Navbar-Burger" onClick={props.onClick}>
+    <span
+      className="Navbar-Burger"
+      onClick={onClick}
+      onKeyPress={onEnter}
+      role="button"
+      tabIndex="-1"
+    >
       <svg
         className="Navbar-Burger-Icon"
         xmlns="http://www.w3.org/2000/svg"

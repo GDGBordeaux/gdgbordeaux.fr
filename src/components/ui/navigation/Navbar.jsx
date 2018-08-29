@@ -4,13 +4,9 @@ import * as React from "react";
 import "./Navbar.css";
 
 type Props = {
-  to: string,
-  children: React.Node[],
-  className: string
+  children: React.Node[]
 };
 
-const Navbar = (props: Props): React.Node => {
-  return <nav className="Navbar">{props.children}</nav>;
-};
+const Navbar = ({ children }: Props): React.Node => <nav className="Navbar">{children}</nav>;
 
 export default Navbar;

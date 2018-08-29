@@ -11,25 +11,20 @@ type Props = {
   className: string
 };
 
-const Link = (props: Props): React.Node => {
-  const classNames = `Navbar-Link ${props.className}`;
+const Link = ({ children, className, exact, to }: Props): React.Node => {
+  const classNames = `Navbar-Link ${className}`;
 
-  if (props.to.indexOf("https://") > -1) {
+  if (to.indexOf("https://") > -1) {
     return (
-      <a className={classNames} href={props.to} target="_blank">
-        {props.children}
+      <a className={classNames} href={to} target="_blank" rel="noopener noreferrer">
+        {children}
       </a>
     );
   }
 
   return (
-    <NavLink
-      exact={props.exact}
-      className={classNames}
-      to={props.to}
-      activeClassName="Navbar-Link--active"
-    >
-      {props.children}
+    <NavLink exact={exact} className={classNames} to={to} activeClassName="Navbar-Link--active">
+      {children}
     </NavLink>
   );
 };

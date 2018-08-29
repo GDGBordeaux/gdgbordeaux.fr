@@ -8,6 +8,8 @@ type Props = {
 };
 
 const dateLang: string = "fr-FR";
+// Known default from flow
+// eslint-disable-next-line no-undef
 const dateOption: Intl$DateTimeFormatOptions = {
   day: "numeric",
   month: "long",
@@ -15,8 +17,8 @@ const dateOption: Intl$DateTimeFormatOptions = {
 };
 const dateToString = (date: Date): string => date.toLocaleDateString(dateLang, dateOption);
 
-const DateComponent = (props: Props): React.Node => (
-  <div>{dateToString(new Date(props.children))}</div>
+const DateComponent = ({ children }: Props): React.Node => (
+  <div>{dateToString(new Date(children))}</div>
 );
 
 export default DateComponent;

@@ -4,12 +4,12 @@ import * as React from "react";
 import "./Favorite.css";
 
 type Props = {
-  active: boolean
+  active?: boolean
 };
 
-const Favorite = (props: Props): React.Node => (
+const Favorite = ({ active }: Props): React.Node => (
   <svg
-    className={`Card-Favorite ${props.active ? "Card-Favorite--active" : ""}`}
+    className={`Card-Favorite ${active ? "Card-Favorite--active" : ""}`}
     height="24"
     viewBox="0 0 24 24"
     width="24"

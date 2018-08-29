@@ -9,13 +9,11 @@ type Props = {
   label: string
 };
 
-const Footer = (props: Props): React.Node => {
-  return (
-    <a href={props.url} className="FooterLink" target="_blank">
-      {props.children}
-      <span className="FooterLink-Label">{props.label}</span>
-    </a>
-  );
-};
+const Footer = ({ children, label, url }: Props): React.Node => (
+  <a href={url} className="FooterLink" target="_blank" rel="noopener noreferrer">
+    {children}
+    <span className="FooterLink-Label">{label}</span>
+  </a>
+);
 
 export default Footer;
