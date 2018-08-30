@@ -46,14 +46,14 @@ const Conduct = (): React.Node => (
     </PageContent>
     <PageContent>
       Il est attendu des participants à qui il est demandé d&apos;arrêter un caractère de
-      harcèlement le faire immédiatement. Si un participant adopte un tel comportement, les
+      harcèlement de le faire immédiatement. Si un participant adopte un tel comportement, les
       organisateurs se réservent le droit de faire ce qui sera nécessaire afin de conserver un
       environment accueillant pour tous les participants, ce qui inclus avertir le coupable ou
       l&apos;exclure de l&apos;évènement sans remboursements (si applicable). Les organisateurs
       peuvent agir pour corriger n&apos;importe quoi qui pourrait géner l&apos;évènement ou rendre
       l&apos;environment hostile pour n&apos;importe quel participant. Nous attendons des
-      participantsde suivre ces règles lors de chacun des évènements ou des rencontres liées. Nous
-      pensons aussi que les gens devraient suivre ces règles aussi en dehors de nos évènements.
+      participants de suivre ces règles lors de chacun des évènements ou des rencontres liées. Nous
+      pensons aussi que les gens devraient suivre ces règles en dehors de nos évènements.
     </PageContent>
     <PageContent>
       <a target="_blank" href="https://2018.jsconf.eu/code-of-conduct/" rel="noopener noreferrer">
