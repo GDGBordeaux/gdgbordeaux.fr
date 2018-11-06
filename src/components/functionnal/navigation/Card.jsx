@@ -1,10 +1,8 @@
 // @flow
 import * as React from "react";
-import firebase from "firebase/app";
-import "firebase/auth";
-import "firebase/database";
-
 import type { Reference } from "firebase/database";
+import firebase from "../../../config/firebase";
+
 import Header from "../../ui/card/Header";
 import Title from "../../ui/card/Title";
 import Paragraph from "../../ui/card/Paragraph";
