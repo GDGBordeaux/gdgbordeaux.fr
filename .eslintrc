@@ -6,6 +6,7 @@
     "jest": true
   },
   "rules": {
+    "linebreak-style": "off",
     "react/jsx-one-expression-per-line": [0],
     "react/jsx-wrap-multilines": [0]
   }
