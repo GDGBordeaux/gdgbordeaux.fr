@@ -37,6 +37,6 @@ const Footer = (): React.Node => (
     </div>
     <div />
   </StyledFooter>
-  );
+);
 
 export default Footer;
