@@ -14,6 +14,6 @@ const FakeCard = (): React.Node => (
     </div>
     <div className="FakeCard-Footer" />
   </div>
-  );
+);
 
 export default FakeCard;
