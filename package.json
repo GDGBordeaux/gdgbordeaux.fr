@@ -2,6 +2,18 @@
   "name": "gdg-bordeaux",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "build": "react-scripts build",
+    "deploy": "npm run build && firebase deploy",
+    "eject": "react-scripts eject",
+    "flow": "flow",
+    "lint": "eslint --ext .js --ext .jsx -c ./.eslintrc ./src",
+    "lint:fix": "eslint --fix --ext .js --ext .jsx -c ./.eslintrc ./src",
+    "prettier": "prettier --write src/**/*.{js,jsx,json,css}",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom",
+    "test:cov": "npm run test -- --coverage"
+  },
   "dependencies": {
     "firebase": "^5.4.1",
     "prop-types": "^15.6.2",
@@ -9,15 +21,6 @@
     "react-dom": "^16.4.2",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5"
-  },
-  "scripts": {
-    "build": "react-scripts build",
-    "deploy": "npm run build && firebase deploy",
-    "eject": "react-scripts eject",
-    "flow": "flow",
-    "lint": "eslint --ext .js --ext .jsx -c ./.eslintrc ./src",
-    "start": "react-scripts start",
-    "test": "react-scripts test --env=jsdom"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
@@ -30,6 +33,26 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
-    "flow-bin": "^0.79.1"
+    "flow-bin": "^0.79.1",
+    "husky": "^1.1.3",
+    "lint-staged": "^8.0.4",
+    "prettier": "^1.15.1"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged",
+      "postcommit": "git update-index --again",
+      "prepush": "npm run test:cov"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{json,css}": [
+      "prettier --write",
+      "git add"
+    ],
+    "src/**/*.{js,jsx}": [
+      "npm run lint:fix",
+      "git add"
+    ]
   }
 }

@@ -73,13 +73,12 @@ class Home extends React.PureComponent<Props, State> {
 
               return new Date(data[a].date) < new Date(data[b].date) ? 1 : -1;
             })
-            .map(
-              key =>
-                data[key].fakeCard === true ? (
-                  <FakeCard key={key} />
-                ) : (
-                  <Card key={key} id={key} {...data[key]} />
-                )
+            .map(key =>
+              data[key].fakeCard === true ? (
+                <FakeCard key={key} />
+              ) : (
+                <Card key={key} id={key} {...data[key]} />
+              )
             )}
         </CardContainer>
         <Footer />
