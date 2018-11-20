@@ -34,11 +34,6 @@ class Navbar extends React.PureComponent<Props, State> {
 
     return (
       <StyledNavbar>
-        <img
-          src="asset/gdg-transparent-white.png"
-          className="Navbar-Logo-White"
-          alt="Logo GDG Bordeaux"
-        />
         <img src="asset/gdg-transparent.png" className="Navbar-Logo" alt="" />
         <div className="Navbar-Links">
           <Burger onClick={this.handleActive} />

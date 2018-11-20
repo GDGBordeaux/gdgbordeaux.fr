@@ -13,11 +13,11 @@ const checkScroll = () => {
     html.classList.add("scrolled");
   }
 };
-const setRandomBackground = () => {
-  const i = 1 + Math.floor(Math.random() * 4);
-  document.body.style.backgroundImage = `url(./asset/bg${i}.jpeg)`;
-};
+// const setRandomBackground = () => {
+//   const i = 1 + Math.floor(Math.random() * 4);
+//   document.body.style.backgroundImage = `url(./asset/bg${i}.jpeg)`;
+// };
 
 window.addEventListener("scroll", checkScroll);
 document.addEventListener("DOMContentLoaded", checkScroll, false);
-document.addEventListener("DOMContentLoaded", setRandomBackground, false);
+// document.addEventListener("DOMContentLoaded", setRandomBackground, false);

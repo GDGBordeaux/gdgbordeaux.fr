@@ -9,9 +9,7 @@ body {
   width: 100%;
 }
 body {
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background-color: #f0f0f0;
   font-family: "Lato", sans-serif;
   padding-top: 80px;
 }
