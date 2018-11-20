@@ -6,12 +6,30 @@
   width: 300px;
   margin-bottom: 30px;
 }
-.Team {
-  border: 3px solid;
-  border-color: #4f8df5 #dd4e42 #ffc20a #129e5a;
-  border-radius: 50%;
-  width: 150px;
+.Team-Image {
   height: 150px;
+  position: relative;
+  width: 150px;
+}
+.Team-Border {
+  bottom: 0;
+  height: 150px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 150px;
+  z-index: 2;
+}
+.Team {
+  border: 10px solid #ffffff;
+  border-radius: 50%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 .Team-Name {
   color: #ffffff;

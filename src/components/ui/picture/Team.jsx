@@ -1,5 +1,6 @@
 // @flow
 import * as React from "react";
+import { ReactComponent as UserCircle } from "../svg/user_circle.svg";
 
 import "./Team.css";
 
@@ -10,7 +11,10 @@ type Props = {
 
 const Team = ({ children, image }: Props): React.Node => (
   <div className="Team-Wrapper">
-    <img className="Team" src={image} alt={children} />
+    <div className="Team-Image">
+      <img className="Team" src={image} alt={children} />
+      <UserCircle className="Team-Border" />
+    </div>
     <span className="Team-Name">{children}</span>
   </div>
 );
