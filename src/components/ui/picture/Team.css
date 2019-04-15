@@ -22,7 +22,7 @@
   z-index: 2;
 }
 .Team {
-  border: 10px solid #ffffff;
+  border: 8px solid transparent;
   border-radius: 50%;
   height: 100%;
   left: 0;
