@@ -1,5 +1,5 @@
 import "./config/firebase";
-import Main from "./main";
+import Main from "./main.tsx";
 import registerServiceWorker from "./registerServiceWorker";
 
 Main();
